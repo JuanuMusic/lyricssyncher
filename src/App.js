@@ -49,6 +49,7 @@ function App() {
               <p className="lead">A simple and fast way to generate a lyrics file synched to an audio file.</p>
               <hr className="my-2" />
               <p>Enter your lyrics, select your audio, sync and download!</p>
+              <small>Developed by <a href="https://www.github.com/juanumusic">Juanu Haedo</a></small>
             </Jumbotron>
           </Col>
         </Row>
