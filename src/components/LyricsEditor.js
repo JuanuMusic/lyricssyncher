@@ -8,12 +8,14 @@ function LyricsEditor(props) {
     }
 
     return (
-        <Form>
-            <FormGroup>
-                <Label for="lyricsField">Enter your lyrics</Label>
-                <Input type="textarea" name="lyrics" id="lyricsField" aria-label="lyrics" rows={20} onChange={handleLyricsChanged} />
-            </FormGroup>
-        </Form>
+        <>
+            <h5>Type or paste your lyrics below and click on "Next Step"</h5>
+            <Form>
+                <FormGroup>
+                    <Input type="textarea" name="lyrics" id="lyricsField" aria-label="lyrics" rows={10} onChange={handleLyricsChanged} />
+                </FormGroup>
+            </Form>
+        </>
     )
 }
 

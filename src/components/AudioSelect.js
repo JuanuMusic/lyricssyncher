@@ -14,8 +14,10 @@ function AudioSelect(props) {
 
     return (
         <>
-            <Label>Select audio file</Label>
-            <Input type="file" onChange={onSelectedFileChanged}></Input>
+            <div style={{marginBottom: '20px'}}>
+                <h5>Select your audio file</h5>
+                <Input type="file" onChange={onSelectedFileChanged}></Input>
+            </div>
         </>
     );
 }

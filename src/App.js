@@ -47,6 +47,8 @@ function App() {
             <Jumbotron>
               <h1 className="display-3">Lyrics Syncher</h1>
               <p className="lead">A simple and fast way to generate a lyrics file synched to an audio file.</p>
+              <hr className="my-2" />
+              <p>Enter your lyrics, select your audio, sync and download!</p>
             </Jumbotron>
           </Col>
         </Row>
