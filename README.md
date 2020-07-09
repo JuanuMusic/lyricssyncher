@@ -4,6 +4,8 @@ A fast and easy way to syncronize lyrics (or any text) with audio.
 
 Live version: http://juanumusic.github.io/lyricssyncher
 
+[![HitCount](http://hits.dwyl.com/juanumusic/lyricssyncher.svg)](http://hits.dwyl.com/juanumusic/lyricssyncher)
+
 ### JSON output
 
 Outputs a JSON file with the following format:
