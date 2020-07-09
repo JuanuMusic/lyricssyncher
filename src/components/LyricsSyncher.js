@@ -74,25 +74,42 @@ function LyricsSyncher(props) {
 
     function onSaveClick(e) {
         const output = JSON.stringify(data);
-        const file = new Blob([output], {type: 'text/json'});
+        const file = new Blob([output], { type: 'text/json' });
         const tmpLink = document.createElement("a");
         tmpLink.href = URL.createObjectURL(file);
-        tmpLink.setAttribute('download','synched_lyrics.json');
+        tmpLink.setAttribute('download', 'synched_lyrics.json');
         tmpLink.click();
     }
 
 
     return (
         <>
-            <ButtonGroup>
-                <Button onClick={() => audio.play()}>Play audio</Button>
-                <Button onClick={onResetClick}>Reset</Button>
-                <Button onClick={onSaveClick}>Save</Button>
-            </ButtonGroup>
             <Container>
+                <Row>
+                    <h3>Instructions</h3>
+                    <ul>
+                        <li>Click on play audio</li>                        
+                        <li>Pres and hold space bar when lyric line starts</li>
+                        <li>Release space bar when lyric line ends</li>
+                        <li>When finished, click on Save to download the json file</li>
+                        <li>If you make a mistake, click on reset to stop the audio and clear the data</li>
+                    </ul>
+
+                </Row>
+                <Row>
+                    <ButtonGroup>
+                        <Button onClick={() => audio.play()}>Play audio</Button>
+                        <Button onClick={onResetClick}>Reset</Button>
+                        <Button onClick={onSaveClick}>Save</Button>
+                    </ButtonGroup>
+                </Row>
                 {lyrics.map((itm, index) => {
-                    return (<Row key={index}>
-                        {itm.isEmpty ? <></> : <Label style={index === currentLine && isRecordingLyric ? { fontWeight: 'bold' } : {}}>{itm}</Label>}
+                    const isEmpty = itm.trim() === '';
+                    const style = {marginBottom: 0};
+                    if(index === currentLine && isRecordingLyric)
+                        style.fontWeight = 'bold';
+                    return (<Row key={index} style={isEmpty ? {display: 'block'} : {}} className="text-center">
+                        {isEmpty ? <div style={{margin: '20px'}}></div> : <p style={style}>{itm}</p>}
                     </Row>);
                 })}
             </Container>
