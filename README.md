@@ -2,7 +2,9 @@
 
 A fast and easy way to syncronize lyrics (or any text) with audio.
 
-### `JSON output`
+Live version: http://juanumusic.github.io/lyricssyncher
+
+### JSON output
 
 Outputs a JSON file with the following format:
 ```json
@@ -14,11 +16,11 @@ Outputs a JSON file with the following format:
 ]
 ```
 
-### `Built with react`
+### Built with reactjs
 
 Client side only. No server side.
 
-### `Contributing`
+### Contributing
 
 Add a ticket on the ISSUES section of send me your PR.
 
