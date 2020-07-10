@@ -24,7 +24,7 @@ Client side only. No server side.
 
 ### Contributing
 
-Add a ticket on the ISSUES section of send me your PR.
+Add a ticket on the ISSUES section or send your PR.
 
 You can also buy me a coffe: [![Donate](https://img.shields.io/badge/$-support-ff69b4.svg?style=flat)](https://paypal.me/juanumusic) 
 
